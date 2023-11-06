@@ -18,7 +18,14 @@ export const TypingText = ({ title, textStyles }) => (
 
   
 );
-
+//5:21 will have to redo 1&2 due to screw up with template literals
 export const TitleText = ({ title, textStyles }) => (
-  <h2>Title Text</h2>
+  <motion.h2
+    variants={textVariant2}
+    initial="hidden"
+    whileInView="show"
+    className={`mt-[8px] font-bold md:text-[64px] text-[40px] text-white ${textStyles}`}
+    >
+    {title}
+  </motion.h2>
 );
